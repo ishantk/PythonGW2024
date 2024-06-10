@@ -34,3 +34,15 @@ print(a is b) # True
 print(a is not b) # False
 
 # HW: Find Difference between == and is
+
+
+speed = 60
+time = 9
+
+speed = speed * (5/18)
+length = speed * time
+
+print("Length of Train is:", length)
+
+# HW: Find 5 Quantative Aptitude problems and solve them using operators
+
