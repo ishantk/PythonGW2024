@@ -79,3 +79,18 @@ Restaurant(name="Ludhiana Veggie Delight",
                                         Dish(name="Paneer Masala", price=350, rating=4.5)
                                     ])
                         ).show()
+
+Restaurant(name="Ludhiana Veggie Delight",
+                        phone="+91 99999 11111",
+                        email="veggies@abc.com",
+                        address="Krishna Nagar", 
+                        ratings=4.5,
+                        menu=Menu(
+                            name="Indian Veggie Delight", 
+                            number_of_dishes=3, 
+                            menu_dishes=[
+                                        Dish(), 
+                                        Dish("Dal Makhani", 250, 4.5),
+                                        Dish(name="Paneer Masala", price=350, rating=4.5)
+                                    ])
+                        ).show()
