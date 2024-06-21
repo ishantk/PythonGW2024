@@ -14,6 +14,8 @@ customer.add_customer_details()
 # Server
 ride = Ride()
 ride.add_ride_details()
+# ride.customer = Customer()
+# ride.customer.add_customer_details()
 ride.link_customer(customer)
 ride.link_driver(driver)
 
