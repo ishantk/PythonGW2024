@@ -89,12 +89,19 @@
 
 class Customer:
 
-    def __init__(self, name, phone, email, age, gender):
+    def __init__(self, name="", phone="", email="", age=0, gender=""):
         self.name = name
         self.phone = phone
         self.email = email
         self.age = age
         self.gender = gender
+
+    def add_customer_details(self):
+        self.name = input("Enter Customer Name: ")
+        self.phone = input("Enter Customer Phone: ")
+        self.email = input("Enter Customer Email: ")
+        self.age = int(input("Enter Customer Age: "))
+        self.gender = input("Enter Customer Gender: ")
 
     def show(self):
         print("~~~~~~~~~~~~CUSTOMER~~~~~~~~~~~~~")
