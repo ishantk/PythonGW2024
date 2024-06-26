@@ -19,12 +19,17 @@ connection = db.connect(user="root",
 print("Connection Created.")
 print(connection)
 
-customer = Customer()
-customer.add_customer_details()
+# customer = Customer()
+# customer.add_customer_details()
 
 # 2: Create SQL Statement
 # sql = "insert into Customer values(null, 'John', '+91 99999 11111', 'john@example,com', 20, 'male')"
-sql = "insert into Customer values(null, '{}', '{}', '{}', {}, '{}')".format(customer.name, customer.phone, customer.email, customer.age, customer.gender)
+
+# sql = "insert into Customer values(null, '{}', '{}', '{}', {}, '{}')".format(customer.name, customer.phone, customer.email, customer.age, customer.gender)
+
+# sql = "update Customer set name = 'Johnnathon', email = 'john.jj@example.com', age=45 where cid = 5"
+
+sql = "delete from Customer where cid = 5"
 
 # 3: Obtain Cursor -> Perfom CRUD Operations with MySQL
 cursor = connection.cursor()
