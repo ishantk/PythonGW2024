@@ -36,16 +36,27 @@ class Customer:
         # created_on is a system date time stamp
 
 
-    # def update_customer_details(self):
-    #     choice = input("Do you wish to update Name (yes/no)")
-    #     if choice == "yes":
-    #         self.name = input("Enter Customer Name: ")
+    def update_customer_details(self):
+        name = input("Enter Customer Name: ")
+        if len(name) != 0:
+            self.name = name
 
-    #     self.phone = input("Enter Customer Phone: ")
-    #     self.email = input("Enter Customer Email: ")
-    #     self.age = int(input("Enter Customer Age: "))
-    #     self.gender = input("Enter Customer Gender: ")
+        phone = input("Enter Customer Phone: ")
+        if len(phone) != 0:
+            self.phone = phone
 
+        email = input("Enter Customer Email: ")
+        if len(email) != 0:
+            self.email = email
+        
+        age = input("Enter Customer Age: ")
+        if len(age) != 0:
+            self.age = int(age)
+
+        gender = input("Enter Customer Gender: ")
+        if len(gender) != 0:
+            self.gender = gender
+            
     def show(self):
         print("~~~~~~~~~~~~CUSTOMER~~~~~~~~~~~~~")
         print("Customer ID: {}".format(self.cid))

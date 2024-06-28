@@ -36,9 +36,20 @@ def main():
             cid = int(input("Enter Customer ID to Update: "))
             sql = "select * from Customer where cid = {}".format(cid)
             rows = db.read(sql)
+            print(rows)
+            
+            customer = Customer(cid=rows[0][0], name=rows[0][1], phone=rows[0][2], email=rows[0][3], age=rows[0][4], gender=rows[0][5])
 
-            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
-            print(tabulate(rows, headers=columns, tablefmt='grid'))
+            print("Customer to Update:")
+            customer.show()
+            customer.update_customer_details()
+
+            sql = "update Customer set name = '{name}', phone='{phone}', email='{email}', age={age}, gender='{gender}', created_on='{created_on}' where cid = {cid}".format_map(vars(customer))
+
+            db.write(sql)
+
+            customer.show()
+            
 
         elif choice == 3:
             cid = int(input("Enter Customer ID to be Deleted: "))
