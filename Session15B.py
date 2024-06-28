@@ -2,6 +2,7 @@
 
 from Session15 import Customer
 from Session15A import Database
+from tabulate import tabulate       # pip install tabulate
 
 def main():
     print("-------------------")
@@ -33,17 +34,32 @@ def main():
 
         elif choice == 2:
             pass
+
         elif choice == 3:
             cid = int(input("Enter Customer ID to be Deleted: "))
             sql = "delete from Customer where cid = {}".format(cid)
-            db.write(sql)
-            print("[CMS App]", cid, "Deleted from DataBase")
+
+            ask = input("Are you sure to delete? (yes/no): ")
+            if ask == "yes":
+                db.write(sql)
+                print("[CMS App]", cid, "Deleted from DataBase")
+            else:
+                print("Delete Operation Skipped")
+
         elif choice == 4:
             pass
         elif choice == 5:
             pass
         elif choice == 6:
-            pass
+            sql = "select * from Customer"
+            rows = db.read(sql)
+
+            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))
+            
+            # for row in rows:
+            #     print(row)
+
         elif choice == 0:
             break
         else:

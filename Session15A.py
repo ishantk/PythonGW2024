@@ -24,4 +24,6 @@ class Database:
 
     # fetch data from DB
     def read(self, sql):
-        pass
+        self.cursor.execute(sql)
+        result = self.cursor.fetchall()
+        return result
