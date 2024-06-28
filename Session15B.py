@@ -33,7 +33,12 @@ def main():
             print("[CMS App]", customer.name, "Saved in DataBase")
 
         elif choice == 2:
-            pass
+            cid = int(input("Enter Customer ID to Update: "))
+            sql = "select * from Customer where cid = {}".format(cid)
+            rows = db.read(sql)
+
+            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))
 
         elif choice == 3:
             cid = int(input("Enter Customer ID to be Deleted: "))
@@ -47,9 +52,21 @@ def main():
                 print("Delete Operation Skipped")
 
         elif choice == 4:
-            pass
+            phone = input("Enter Customers Phone Number: ")
+            sql = "select * from Customer where phone = '{}'".format(phone)
+            rows = db.read(sql)
+
+            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))
+
         elif choice == 5:
-            pass
+            cid = int(input("Enter Customers ID: "))
+            sql = "select * from Customer where cid = {}".format(cid)
+            rows = db.read(sql)
+
+            columns = ["cid", "name", "phone", "email", "age", "gender", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))
+
         elif choice == 6:
             sql = "select * from Customer"
             rows = db.read(sql)

@@ -35,6 +35,17 @@ class Customer:
         # we will not get input for created_on
         # created_on is a system date time stamp
 
+
+    # def update_customer_details(self):
+    #     choice = input("Do you wish to update Name (yes/no)")
+    #     if choice == "yes":
+    #         self.name = input("Enter Customer Name: ")
+
+    #     self.phone = input("Enter Customer Phone: ")
+    #     self.email = input("Enter Customer Email: ")
+    #     self.age = int(input("Enter Customer Age: "))
+    #     self.gender = input("Enter Customer Gender: ")
+
     def show(self):
         print("~~~~~~~~~~~~CUSTOMER~~~~~~~~~~~~~")
         print("Customer ID: {}".format(self.cid))
