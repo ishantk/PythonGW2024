@@ -20,6 +20,7 @@ def main():
         print("7: Add Consultation For Patient")
         print("8: View All Consultations")
         print("9: View Consultations of a Patient")
+        print("10: View FollowUps")
         print("0: To Quit App")
 
         choice = int(input("Enter Your Choice: "))
@@ -59,6 +60,16 @@ def main():
 
             columns = ["cid", "pid", "remarks", "medicines", "next_followup", "created_on"]    
             print(tabulate(rows, headers=columns, tablefmt='grid'))         
+
+        elif choice == 10:
+            start_date = input("Enter Start Date Time(yyyy-mm-dd hh:mm:ss): ")
+            end_date = input("Enter End Date Time(yyyy-mm-dd hh:mm:ss): ")
+            
+            sql = "select * from Consultation where next_followup >= '{}' and next_followup <= '{}'".format(start_date, end_date)
+            rows = db.read(sql)
+
+            columns = ["cid", "pid", "remarks", "medicines", "next_followup", "created_on"]    
+            print(tabulate(rows, headers=columns, tablefmt='grid'))     
 
         elif choice == 0:
             break
