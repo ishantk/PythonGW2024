@@ -54,7 +54,6 @@ college_attendance = {}.fromkeys(attendance, 100)
 college_attendance["aug"] = 70
 print(college_attendance)
 
-
 items = list(my_data.items())
 values = list(my_data.values())
 
@@ -66,3 +65,5 @@ for item in my_data.items():
 
 for value in my_data.values():
     print(value)
+
+my_data[333] = "harry"
