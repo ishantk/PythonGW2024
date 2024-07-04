@@ -77,3 +77,6 @@ data.insert(2, 77)
 data.insert(-1, 88)
 
 print("data is:", data)
+
+# del data[1]
+# del data[1:4]
