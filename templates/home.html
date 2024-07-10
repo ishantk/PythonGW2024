@@ -9,15 +9,33 @@
     <body>
         <div class="container-fluid p-5 bg-primary text-white text-center">
             <h1>Doctors App</h1>
-            <p>Developed by ATPL</p> 
-            <p>Technology Stack: Python, Flask, Bootstrap, MongoDB</p> 
+            <p>Welcome, {{email}}</p> 
+        </div>
+
+        <div class="container-fluid p-5">
+
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">View Patients</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Search Patient</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Add Consultation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">View Consultations</a>
+                </li>
+              </ul>
+
         </div>
 
 
         <div class="container-fluid p-5">
-            <h3>Register Here</h3>
+            <h3>Add New Patient</h3>
+            <form action="">
 
-            <form action="/add-user" method="post">
                 <div class="mb-3 mt-3">
                     <label for="name" class="form-label">Name:</label>
                     <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
@@ -27,14 +45,9 @@
                   <label for="email" class="form-label">Email:</label>
                   <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
                 </div>
-                <div class="mb-3">
-                  <label for="pwd" class="form-label">Password:</label>
-                  <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password">
-                </div>
-                <button type="submit" class="btn btn-primary">Register</button>
-              </form>
 
-              <a href="/">Exisiting User? Login Here</a>
+                <button type="submit" class="btn btn-primary">Add Patient</button>
+              </form>
 
         </div>
 

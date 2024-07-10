@@ -32,6 +32,7 @@ class MongoDBHelper:
         print("Document inserted in Collection:", self.collection.name)
         # print("result is:", result, result.__inserted_id)
         print("result is:", result)
+        return result
 
     # query as input will act as condition
     # what to delete, what to fetch, what to update 
