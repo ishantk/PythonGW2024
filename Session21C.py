@@ -43,8 +43,10 @@ class MongoDBHelper:
     def delete(self, query=""):
         result = self.collection.delete_one(query)
         print("result is:", result)
+        return result
 
     def update(self, document, query):
         document_to_upate = {'$set': document}
         result = self.collection.update_one(query, document_to_upate)
         print("result is:", result)
+        return result
