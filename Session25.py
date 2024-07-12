@@ -55,7 +55,26 @@ def register():
 
 @web_app.route("/home")
 def home():
-    return render_template("home.html", name=session["name"], email=session["email"])
+    if len(session["email"]) != 0:
+        return render_template("home.html", name=session["name"], email=session["email"])
+    else:
+        return redirect("/")
+
+@web_app.route("/success")
+def success():
+    return render_template("success.html", name=session["name"], email=session["email"])
+
+@web_app.route("/error")
+def error():
+    return render_template("error.html", name=session["name"], email=session["email"])
+
+@web_app.route("/logout")
+def logout():
+    # Reset the Data in Session Object
+    session["email"] = ""
+    session["name"] = ""
+    return redirect("/")
+
 
 @web_app.route("/add-user", methods=["POST"])
 def add_user_in_db():
@@ -103,7 +122,10 @@ def feth_user_from_db():
         session['name'] = user_data["name"]
         return render_template("home.html", name=session['name'], email=session['email'])
     else:
-        return "User Not Found. Please Try Again"
+        return render_template("error.html", message="User Not Found. Please Try Again",
+                               name=session["name"], email=session["email"])
+    
+    
 
 
 @web_app.route("/add-patient", methods=["POST"])
@@ -125,12 +147,15 @@ def add_patient_in_db():
     db_helper.collection = db_helper.db["patients"]
     # Save Patient in DataBase i.e. MongoDB
     result = db_helper.insert(patient_data)
-    message = "Patient Added Successfully"
-    return message
+    return render_template("success.html", message = "Patient Added Successfully",
+                           name=session["name"], email=session["email"])
 
 @web_app.route("/fetch-patients")
 def fetch_patients_from_db():
 
+    if len(session["email"])==0:
+        return redirect("/")
+    
     # Create a Dictionary with Data from HTML Register Form
     user_data = {
         "doctor_email": session["email"]
@@ -147,7 +172,8 @@ def fetch_patients_from_db():
         return render_template("patients.html", patients=result, 
                                name=session["name"], email=session["email"])
     else:
-        return "Patients Not Found. Please Try Again"
+        return render_template("error.html", message="Patients Not Found. Please Try Again",
+                               name=session["name"], email=session["email"])
 
 
 def main():

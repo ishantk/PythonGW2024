@@ -32,7 +32,7 @@
                   <a class="nav-link" href="#">Search Patient</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Logout</a>
+                  <a class="nav-link" href="/logout">Logout</a>
                 </li>
               </ul>
             </div>
@@ -56,6 +56,7 @@
                       <th>Age</th>
                       <th>Address</th>
                       <th>CreatedOn</th>
+                      <th>Options</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -69,6 +70,7 @@
                       <td>{{patient['age']}}</td>
                       <td>{{patient['address']}}</td>
                       <td>{{patient['created_on']}}</td>
+                      <td><a href="#">Update</a> | <a href="#">Delete</a></td>
                     </tr>
                     {% endfor %}
                   </tbody>
