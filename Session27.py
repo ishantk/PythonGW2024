@@ -213,8 +213,49 @@ def update_patient_in_db():
 
 @web_app.route("/add-consultation/<id>")
 def add_consultation(id):
+    # Store the Patient ID in Session, temporarily
+    session["patient_id"] = id
+    query = {"_id": ObjectId(id)}
+    db_helper.collection = db_helper.db["patients"]
+    
+    # result is a list
+    result = db_helper.fetch(query=query)
+    
+    # As we will get the list of documents, and 0th index will be our document
+    # with patient id matching the one we have passed
+    patient_doc = result[0]
+    session["patient_name"] = patient_doc["name"]
     return render_template("add-consultation.html",
+                           name=session["name"], email=session["email"],
+                           patient_name = session["patient_name"]
+                           )
+
+
+@web_app.route("/add-consultation-in-db", methods=["POST"])
+def add_consultation_in_db():
+
+    # Create a Dictionary with Data from HTML Register Form
+    consultation_data = {
+        "complaints": request.form["complaints"],
+        "bp": request.form["bp"],
+        "temperature": request.form["temperature"],
+        "sugar": request.form["sugar"],
+        "medicines": request.form["medicines"],
+        "remarks": request.form["remarks"],
+        "followup": request.form['followup'],
+        "doctor_email": session['email'],
+        "doctor_name": session['name'],
+        "patient_id": session["patient_id"],
+        "patient_name": session["patient_name"],
+        "created_on": datetime.datetime.now()
+    }
+
+    db_helper.collection = db_helper.db["consultations"]
+    # Save Patient in DataBase i.e. MongoDB
+    result = db_helper.insert(consultation_data)
+    return render_template("success.html", message = "Consultation Added Successfully",
                            name=session["name"], email=session["email"])
+
 
 @web_app.route("/view-consultations/<id>")
 def view_consultations(id):

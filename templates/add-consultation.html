@@ -11,6 +11,8 @@
             <h1>Doctors App</h1>
             <p>Welcome, Dr. {{name}}</p> 
             <p>{{email}}</p> 
+            <p>Add Consultation for {{patient_name}}</p> 
+
         </div>
 
         <div class="container-fluid p-5">
@@ -44,7 +46,7 @@
         <div class="container-fluid p-5">
           <h3>Add New Consultation</h3>
 
-          <form action="" method="post">
+          <form action="/add-consultation-in-db" method="post">
 
               <div class="mb-3">
                 <label for="address" class="form-label">Chief Complaints:</label>
@@ -53,7 +55,7 @@
 
               <div class="mb-3">
                 <label for="address" class="form-label">Blood Pressure:</label>
-                <input type="text" class="form-control" id="bp" placeholder="Enter Blood Pressure" name="cp">
+                <input type="text" class="form-control" id="bp" placeholder="Enter Blood Pressure" name="bp">
               </div>
 
               <div class="mb-3">
