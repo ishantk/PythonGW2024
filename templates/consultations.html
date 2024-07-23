@@ -26,9 +26,6 @@
                   <a class="nav-link" href="#">Add Consultation</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/fetch-consultations">View Consultations</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="#">Search Patient</a>
                 </li>
                 <li class="nav-item">
@@ -44,36 +41,37 @@
         <div class="container-fluid p-5">
 
             <div class="container mt-3">
-                <h2>All Patients</h2>
-                <p>List of Patients in Your System:</p>            
+                <h2>All Consultations</h2>
+                <p>List of Consultations in Your System:</p>            
                 <table class="table table-striped">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Phone</th>
-                      <th>Gender</th>
-                      <th>Age</th>
-                      <th>Address</th>
+                      <th>Complaints</th>
+                      <th>BP</th>
+                      <th>Temperature</th>
+                      <th>Sugar</th>
+                      <th>Medicines</th>
+                      <th>Remarks</th>
+                      <th>FollowUp</th>
+                      <th>Patient</th>
                       <th>CreatedOn</th>
-                      <th>Options</th>
                     </tr>
                   </thead>
                   <tbody>
 
-                    {% for patient in patients %}
+                    {% for consultation in consultations %}
                     <tr>
-                      <td>{{patient['name']}}</td>
-                      <td>{{patient['email']}}</td>
-                      <td>{{patient['phone']}}</td>
-                      <td>{{patient['gender']}}</td>
-                      <td>{{patient['age']}}</td>
-                      <td>{{patient['address']}}</td>
-                      <td>{{patient['created_on']}}</td>
-                      <td><a href="/update-patient/{{patient['_id']}}">Update</a> 
-                        | <a href="/delete-patient/{{patient['_id']}}">Delete</a> 
-                        | <a href="/add-consultation/{{patient['_id']}}">Add Consultation</a>
-                        | <a href="/view-consultations/{{patient['_id']}}">View Consultations</a>
+                      <td>{{consultation['complaints']}}</td>
+                      <td>{{consultation['bp']}}</td>
+                      <td>{{consultation['temperature']}}</td>
+                      <td>{{consultation['sugar']}}</td>
+                      <td>{{consultation['medicines']}}</td>
+                      <td>{{consultation['remarks']}}</td>
+                      <td>{{consultation['followup']}}</td>
+                      <td>{{consultation['patient_name']}}</td>
+                      <td>{{consultation['created_on']}}</td>
+                      <td><a href="#">Update</a> 
+                        | <a href="#">Delete</a> 
                         </td>
                     </tr>
                     {% endfor %}
