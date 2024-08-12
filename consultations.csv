@@ -1,0 +1,41 @@
+_id,complaints,bp,temperature,sugar,medicines,remarks,followup,doctor_email,doctor_name,patient_id,patient_name,created_on
+1,Headache,130/85,99.0,85,Tylenol,headache for 3 days,2024-01-15,drajay@example.com,Dr. Ajay,1,Neha Patel,2024-01-14T14:22:00.000+00:00
+2,Cough,120/80,100.5,88,Robitussin,cough persists for 2 weeks,2024-01-20,drajay@example.com,Dr. Ajay,2,Rajesh Kumar,2024-01-19T10:12:00.000+00:00
+3,Back Pain,140/90,98.6,92,Advil,lower back pain for 5 days,2024-02-01,drmeera@example.com,Dr. Meera,3,Anita Sharma,2024-01-31T16:25:00.000+00:00
+4,Fever,150/95,102.0,80,Tylenol,high fever for 4 days,2024-02-10,drmeera@example.com,Dr. Meera,4,Sunil Rao,2024-02-09T12:35:00.000+00:00
+5,Stomach Ache,135/85,101.2,90,Pepto-Bismol,stomach ache since 7 days,2024-02-20,drvijay@example.com,Dr. Vijay,5,Rajesh Kumar,2024-02-19T08:45:00.000+00:00
+6,Nausea,125/80,99.8,86,Emetrol,nausea after meals,2024-03-05,drvijay@example.com,Dr. Vijay,6,Arjun Singh,2024-03-04T09:55:00.000+00:00
+7,Sinusitis,140/85,100.2,89,Nasal Spray,persistent sinus issues,2024-03-15,drneelam@example.com,Dr. Neelam,7,Meera Desai,2024-03-14T11:22:00.000+00:00
+8,Cold,130/85,99.5,87,NyQuil,ongoing cold symptoms,2024-04-01,drneelam@example.com,Dr. Neelam,8,Amit Kumar,2024-03-31T13:10:00.000+00:00
+9,Chest Pain,145/95,101.0,92,Ibuprofen,chest pain for 2 days,2024-04-15,drrajesh@example.com,Dr. Rajesh,9,Rajesh Kumar,2024-04-14T14:20:00.000+00:00
+10,Shortness of Breath,150/100,102.5,85,Albuterol,breathing difficulties,2024-05-01,drrajesh@example.com,Dr. Rajesh,10,Arvind Sharma,2024-01-14T14:22:00.000+00:00
+11,Headache,128/84,99.8,88,Aspirin,recurring headache,2024-05-10,drsuman@example.com,Dr. Suman,11,Ankita Yadav,2024-05-09T11:00:00.000+00:00
+12,Joint Pain,135/88,98.9,90,Advil,joint pain for 6 days,2024-05-20,drsuman@example.com,Dr. Suman,12,Ravi Patel,2024-05-19T12:15:00.000+00:00
+13,Dizziness,125/80,100.0,85,Vertigo Medication,feeling dizzy for 3 days,2024-06-01,drrahul@example.com,Dr. Rahul,13,Diya Singh,2024-05-31T09:25:00.000+00:00
+14,Allergy,140/85,99.5,90,Antihistamine,allergy symptoms worsening,2024-06-10,drrahul@example.com,Dr. Rahul,14,Arjun Rao,2024-06-09T14:30:00.000+00:00
+15,Abdominal Pain,138/85,101.0,92,Pepto-Bismol,stomach pain since 4 days,2024-06-20,drsuman@example.com,Dr. Suman,15,Isabella Gupta,2024-06-19T15:45:00.000+00:00
+16,Head Cold,120/80,99.7,87,Nasal Decongestant,cold symptoms for 5 days,2024-07-01,drajay@example.com,Dr. Ajay,16,Aditya Patel,2024-06-30T10:55:00.000+00:00
+17,Muscle Pain,130/85,100.2,85,Ibuprofen,muscle pain for a week,2024-07-10,drneelam@example.com,Dr. Neelam,17,Preeti Rani,2024-07-09T11:35:00.000+00:00
+18,Sore Throat,145/90,101.5,89,Lozenges,sore throat for 3 days,2024-07-20,drvijay@example.com,Dr. Vijay,18,Arjun Yadav,2024-01-14T14:22:00.000+00:00
+19,Nausea,125/80,99.9,88,Emetrol,nausea and dizziness,2024-08-01,drrahul@example.com,Dr. Rahul,19,Sneha Patel,2024-07-31T13:50:00.000+00:00
+20,Cold,130/85,100.0,86,NyQuil,persistent cold symptoms,2024-08-10,drsuman@example.com,Dr. Suman,20,Vihaan Sharma,2024-08-09T14:55:00.000+00:00
+21,Chest Pain,148/95,101.8,93,Ibuprofen,chest discomfort,2024-01-16,drajay@example.com,Dr. Ajay,21,Manish Mehta,2024-01-15T16:05:00.000+00:00
+22,Headache,132/86,99.6,84,Tylenol,headache and nausea,2024-01-25,drajay@example.com,Dr. Ajay,22,Anjali Sharma,2024-01-24T17:15:00.000+00:00
+23,Back Pain,140/90,98.7,91,Advil,acute back pain,2024-02-05,drmeera@example.com,Dr. Meera,23,Deepak Kumar,2024-01-14T14:22:00.000+00:00
+24,Fever,150/95,102.3,82,Tylenol,fever with chills,2024-02-15,drmeera@example.com,Dr. Meera,24,Shivani Sharma,2024-02-14T15:40:00.000+00:00
+25,Stomach Ache,136/84,101.5,89,Pepto-Bismol,stomach cramps and nausea,2024-02-25,drvijay@example.com,Dr. Vijay,25,Pratik Patel,2024-02-24T11:50:00.000+00:00
+26,Nausea,127/82,99.9,84,Emetrol,nausea after eating,2024-03-10,drvijay@example.com,Dr. Vijay,26,Meenal Gupta,2024-03-09T12:00:00.000+00:00
+27,Sinusitis,145/87,100.4,87,Nasal Spray,sinus congestion and pressure,2024-03-20,drneelam@example.com,Dr. Neelam,27,Ankush Verma,2024-03-19T14:15:00.000+00:00
+28,Cold,131/82,99.6,88,NyQuil,constant cold symptoms,2024-04-05,drneelam@example.com,Dr. Neelam,28,Swati Patel,2024-04-04T15:30:00.000+00:00
+29,Chest Pain,148/96,101.2,90,Ibuprofen,sharp chest pain,2024-04-18,drrajesh@example.com,Dr. Rajesh,29,Komal Yadav,2024-04-17T16:45:00.000+00:00
+30,Shortness of Breath,150/102,102.0,86,Albuterol,breathing issues during exercise,2024-05-05,drrajesh@example.com,Dr. Rajesh,30,Nidhi Gupta,2024-05-04T11:10:00.000+00:00
+31,Headache,129/85,99.5,85,Aspirin,headache and dizziness,2024-05-15,drsuman@example.com,Dr. Suman,31,Varun Rao,2024-05-14T14:25:00.000+00:00
+32,Joint Pain,137/88,98.8,90,Advil,persistent joint pain,2024-05-25,drsuman@example.com,Dr. Suman,32,Aarti Sharma,2024-05-24T10:35:00.000+00:00
+33,Dizziness,126/81,100.0,87,Vertigo Medication,frequent dizziness,2024-06-05,drrahul@example.com,Dr. Rahul,33,Rahul Mehta,2024-06-04T09:50:00.000+00:00
+34,Allergy,142/89,99.5,88,Antihistamine,seasonal allergy symptoms,2024-06-15,drrahul@example.com,Dr. Rahul,34,Seema Kapoor,2024-06-14T11:05:00.000+00:00
+35,Abdominal Pain,139/86,101.2,92,Pepto-Bismol,abdominal discomfort and pain,2024-06-25,drsuman@example.com,Dr. Suman,35,Manisha Jain,2024-06-24T15:20:00.000+00:00
+36,Head Cold,122/79,100.2,86,Nasal Decongestant,congested head and runny nose,2024-07-10,drajay@example.com,Dr. Ajay,36,Neeraj Gupta,2024-07-09T14:45:00.000+00:00
+37,Muscle Pain,132/84,100.5,87,Ibuprofen,aching muscles after workout,2024-07-20,drneelam@example.com,Dr. Neelam,37,Pooja Patel,2024-07-19T11:10:00.000+00:00
+38,Sore Throat,147/92,101.3,89,Lozenges,throat pain and irritation,2024-08-05,drvijay@example.com,Dr. Vijay,38,Neha Joshi,2024-08-04T12:20:00.000+00:00
+39,Nausea,126/83,100.0,85,Emetrol,nausea with vomiting,2024-08-15,drrahul@example.com,Dr. Rahul,39,Ajay Singh,2024-08-14T13:35:00.000+00:00
+40,Cold,132/85,99.8,87,NyQuil,cold and congestion,2024-08-25,drsuman@example.com,Dr. Suman,40,Ankit Sharma,2024-08-24T14:50:00.000+00:00
